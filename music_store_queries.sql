@@ -99,7 +99,7 @@ with the highest amount of purchases. Write a query that returns each country al
 the maximum number of purchases is shared return all Genres. */
 /* Steps to Solve:  There are two parts in question- first most popular music genre and second need data at country level. */
 
-/* Method 1: Using CTE */
+/* Method : Using CTE */
 
 WITH popular_genre AS 
 (
@@ -121,8 +121,6 @@ For countries where the top amount spent is shared, provide all customers who sp
 
 /* Steps to Solve:  Similar to the above question. There are two parts in question- 
 first find the most spent on music for each country and second filter the data for respective customers. */
-
-/* Method 1: using CTE */
 
 WITH Customter_with_country AS (
 		SELECT customer.customer_id,first_name,last_name,billing_country,SUM(total) AS total_spending,
